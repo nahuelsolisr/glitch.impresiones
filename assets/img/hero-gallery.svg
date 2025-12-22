@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+  <defs>
+    <pattern id="sprinkles" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="#5fd4cf" opacity="0.25"/>
+      <rect x="10" y="10" width="6" height="26" rx="3" fill="#2ab8b3" opacity="0.6"/>
+      <rect x="30" y="22" width="6" height="26" rx="3" fill="#2ab8b3" opacity="0.6"/>
+      <rect x="46" y="4" width="6" height="26" rx="3" fill="#2ab8b3" opacity="0.6"/>
+    </pattern>
+    <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ff7e59"/>
+      <stop offset="100%" stop-color="#ff6ea7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#sprinkles)"/>
+  <circle cx="380" cy="420" r="240" fill="url(#grad)"/>
+  <circle cx="700" cy="700" r="320" fill="#62e3e8"/>
+  <path d="M220 900 C 500 740, 900 980, 1100 760" stroke="#181818" stroke-width="20" fill="none" opacity="0.3"/>
+</svg>

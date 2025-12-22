@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto – Glitch impresiones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><span class="logo-ine">GLITCH</span><span class="logo-agresta">Impresiones</span></a>
+      <nav class="main-nav"><ul>
+        <li><a href="gallery.html">Galeria</a></li>
+        <li><a class="active" href="contact.html">Contacto</a></li>
+      </ul></nav>
+    </div>
+  </header>
+  <main class="container" style="padding:40px 0">
+    <h1 style="font-family:'Fredoka',sans-serif">Contacto</h1>
+    <p>Completá el formulario o escribinos a <a href="mailto:glitchimpresiones@gmail.com">glitchimpresiones@gmail.com</a></p>
+    <form id="contact-form" class="contact-form" onsubmit="return false;" style="max-width:740px">
+      <label>
+        <span>Nombre</span>
+        <input id="cf-name" type="text" placeholder="Tu nombre" required />
+      </label>
+      <label>
+        <span>Email</span>
+        <input id="cf-email" type="email" placeholder="tu@email.com" required />
+      </label>
+      <label class="full">
+        <span>Asunto</span>
+        <input id="cf-subject" type="text" placeholder="Asunto" />
+      </label>
+      <label class="full">
+        <span>Mensaje</span>
+        <textarea id="cf-message" placeholder="Contanos qué necesitás" rows="6"></textarea>
+      </label>
+      <div class="actions">
+        <button id="cf-send" class="btn primary" type="submit">Enviar</button>
+      </div>
+    </form>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner">©2026 GLITCH IMPRESIONES</div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/main.js"></script>
+</body>
+</html>
