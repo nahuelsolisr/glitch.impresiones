@@ -1,0 +1,85 @@
+/* Fondo decorativo con iconos flotantes */
+.decorative-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #E2D5F0 0%, #e8e3ff 50%, #E2D5F0 100%);
+  z-index: -1;
+  overflow: hidden;
+}
+
+.decorative-icon {
+  position: absolute;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(69, 57, 116, 0.1));
+}
+
+.decorative-icon:nth-child(1) {
+  top: 10%;
+  left: 5%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+  transform: rotate(-15deg);
+}
+
+.decorative-icon:nth-child(2) {
+  top: 20%;
+  right: 8%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 1s;
+  transform: rotate(10deg);
+}
+
+.decorative-icon:nth-child(3) {
+  top: 60%;
+  left: 3%;
+  width: 70px;
+  height: 70px;
+  animation-delay: 2s;
+  transform: rotate(5deg);
+}
+
+.decorative-icon:nth-child(4) {
+  bottom: 15%;
+  right: 5%;
+  width: 90px;
+  height: 90px;
+  animation-delay: 3s;
+  transform: rotate(-8deg);
+}
+
+.decorative-icon:nth-child(5) {
+  bottom: 30%;
+  left: 8%;
+  width: 65px;
+  height: 65px;
+  animation-delay: 4s;
+  transform: rotate(12deg);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rotation, 0deg));
+  }
+  50% {
+    transform: translateY(-20px) rotate(calc(var(--rotation, 0deg) + 5deg));
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .decorative-icon {
+    opacity: 0.05;
+  }
+  
+  .decorative-icon:nth-child(1) { width: 50px; height: 50px; }
+  .decorative-icon:nth-child(2) { width: 40px; height: 40px; }
+  .decorative-icon:nth-child(3) { width: 45px; height: 45px; }
+  .decorative-icon:nth-child(4) { width: 55px; height: 55px; }
+  .decorative-icon:nth-child(5) { width: 42px; height: 42px; }
+}
