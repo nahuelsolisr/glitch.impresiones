@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/header.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -19,37 +20,134 @@
       </ul></nav>
     </div>
   </header>
-  <main class="container" style="padding:40px 0">
-    <h1 style="font-family:'Fredoka',sans-serif">Contacto</h1>
-    <p>Completá el formulario o escribinos a <a href="mailto:glitchimpresiones@gmail.com">glitchimpresiones@gmail.com</a></p>
-    <p class="services-lead">Podés mandar mensaje privado o comunicarte por WhatsApp. ¿A dónde enviar las impresiones? Podés enviar los archivos por WhatsApp y las imágenes por mail. Tené en cuenta que si enviás las imágenes en PNG no se pierde la calidad.</p>
-    
-    <div class="cta-pills" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:30px 0">
-      <a class="btn primary pill" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
-    
-    <form id="contact-form" class="contact-form" onsubmit="return false;" style="max-width:740px">
-      <label>
-        <span>Nombre</span>
-        <input id="cf-name" type="text" placeholder="Tu nombre" required />
-      </label>
-      <label>
-        <span>Email</span>
-        <input id="cf-email" type="email" placeholder="tu@email.com" required />
-      </label>
-      <label class="full">
-        <span>Asunto</span>
-        <input id="cf-subject" type="text" placeholder="Asunto" />
-      </label>
-      <label class="full">
-        <span>Mensaje</span>
-        <textarea id="cf-message" placeholder="Contanos qué necesitás" rows="6"></textarea>
-      </label>
-      <div class="actions">
-        <button id="cf-send" class="btn primary" type="submit">Enviar</button>
+
+  <main>
+    <!-- Contact Methods Section -->
+    <section class="contact-methods-section">
+      <div class="container">
+        <div class="contact-methods-grid">
+          <a href="mailto:glitchimpresiones@gmail.com" class="contact-method-card">
+            <div class="contact-method-icon">📧</div>
+            <div class="contact-method-info">
+              <h3>Email</h3>
+              <p>glitchimpresiones@gmail.com</p>
+            </div>
+          </a>
+          
+          <a href="https://wa.me/5491164132413" target="_blank" rel="noopener" class="contact-method-card">
+            <div class="contact-method-icon">💬</div>
+            <div class="contact-method-info">
+              <h3>WhatsApp</h3>
+              <p>Respuesta inmediata</p>
+            </div>
+          </a>
+        </div>
       </div>
-    </form>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <div class="container">
+        <div class="contact-form-wrapper">
+          <div class="contact-form-header">
+            <h2 class="contact-form-title">Envíanos tu Mensaje</h2>
+            <p class="contact-form-subtitle">Contanos sobre tu proyecto y te responderemos a la brevedad</p>
+          </div>
+          
+          <form id="contact-form" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nombre *</label>
+                <input id="name" name="name" type="text" placeholder="Tu nombre completo" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" placeholder="tu@email.com" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Teléfono (opcional)</label>
+              <input id="phone" name="phone" type="tel" placeholder="+54 9 XXX XXX XXX">
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Asunto *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Seleccioná un motivo</option>
+                <option value="consulta">Consulta general</option>
+                <option value="presupuesto">Solicitar presupuesto</option>
+                <option value="diseno">Ayuda con diseño</option>
+                <option value="urgente">Proyecto urgente</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Mensaje *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Contanos los detalles de tu proyecto..." required></textarea>
+            </div>
+            
+            <div class="form-actions">
+              <button type="submit" class="btn primary contact-form-btn">
+                <span>Enviar Mensaje</span>
+                <span class="btn-icon">📤</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Info Cards -->
+        <div class="contact-info-cards">
+          <div class="info-card">
+            <div class="info-card-icon">⏰</div>
+            <h3>Horario de Atención</h3>
+            <p>Lunes a Viernes: 9:00 - 18:00</p>
+            <p>Sábados: 9:00 - 13:00</p>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-card-icon">🚀</div>
+            <h3>Tiempo de Respuesta</h3>
+            <p>Email: 2-4 horas</p>
+            <p>WhatsApp: Inmediato</p>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-card-icon">📍</div>
+            <h3>Envíos</h3>
+            <p>Enviamos a todo el país</p>
+            <p>Retiro por taller disponible</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+      <div class="container">
+        <h2 class="faq-title">Preguntas Frecuentes</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>¿Qué formatos de archivo aceptan?</h3>
+            <p>Aceptamos PNG, JPG, PDF, AI, PSD. Para mejor calidad, recomendamos PNG o PDF.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Cuánto demora el pedido?</h3>
+            <p>Dependiendo del volumen, entre 24-72 horas. Te confirmamos el tiempo exacto al consultar.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Hacen envíos a domicilio?</h3>
+            <p>Sí, enviamos a todo Argentina por correo o moto. También podés retirar por nuestro taller.</p>
+          </div>
+          <div class="faq-item">
+            <h3>¿Necesito pagar antes?</h3>
+            <p>Trabajamos con 50% de señal y el resto al recibir. También aceptamos mercado pago.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
@@ -66,7 +164,7 @@
               </svg>
               glitchimpresiones@gmail.com
             </a>
-            <a href="https://wa.me/" target="_blank" rel="noopener" class="footer-link">
+            <a href="https://wa.me/5491164132413" target="_blank" rel="noopener" class="footer-link">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
               </svg>
@@ -98,6 +196,7 @@
       </div>
     </div>
   </footer>
+
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="assets/main.js"></script>
 </body>

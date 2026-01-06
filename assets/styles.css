@@ -219,26 +219,33 @@ a{color:inherit;text-decoration:none}
   border-radius:50%;
   backdrop-filter:blur(10px);
   animation:float 6s ease-in-out infinite;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.print-icon, .paper-icon, .design-icon{
+  font-size:20px;
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 .float-1{
   top:15%;
   left:10%;
-  width:40px;
-  height:40px;
+  width:50px;
+  height:50px;
   animation-delay:0s;
 }
 .float-2{
   top:25%;
   right:15%;
-  width:32px;
-  height:32px;
+  width:40px;
+  height:40px;
   animation-delay:2s;
 }
 .float-3{
   bottom:20%;
   left:20%;
-  width:36px;
-  height:36px;
+  width:45px;
+  height:45px;
   animation-delay:4s;
 }
 @keyframes float{
@@ -451,7 +458,7 @@ a{color:inherit;text-decoration:none}
 .overline{
   font-weight:700;
   letter-spacing:.12em;
-  color:#fff;
+  color:#453974;
   text-transform:uppercase;
   margin:0 0 16px;
   font-size:14px;
@@ -503,17 +510,436 @@ a{color:inherit;text-decoration:none}
   color:#fff;
   font-weight:700;
 }
-.story-media img{width:100%;height:auto;display:block}
+/* Contact Methods Section */
+.contact-methods-section{
+  padding:80px 0;
+  background:linear-gradient(135deg, var(--brand-2) 0%, var(--brand-3) 100%);
+}
+.contact-methods-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:32px;
+  max-width:800px;
+  margin:0 auto;
+}
+.contact-method-card{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:32px;
+  text-decoration:none;
+  color:#fff;
+  transition:all 0.3s ease;
+}
+.contact-method-card:hover{
+  background:rgba(255,255,255,0.15);
+  transform:translateY(-4px);
+  box-shadow:0 12px 24px rgba(0,0,0,0.15);
+}
+.contact-method-icon{
+  font-size:32px;
+  flex-shrink:0;
+}
+.contact-method-info h3{
+  font-family:'Fredoka',sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:#fff;
+  margin:0 0 4px;
+}
+.contact-method-info p{
+  color:rgba(255,255,255,0.8);
+  margin:0;
+  font-size:16px;
+}
 
-.new-gallery{padding:28px 0 60px}
-.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-.section-head h2{font-family:'Fredoka',sans-serif;font-size:36px;margin:0}
-.link{color:var(--accent)}
-.cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card.flat{border:1px solid #ececef;border-radius:14px;overflow:hidden;background:#fff}
-.card.flat img{display:block;width:100%;height:auto}
-.card-title{font-weight:700;margin:8px 0}
-.card.flat figcaption{padding:10px}
+/* Contact Form Section */
+.contact-form-section{
+  padding:60px 0;
+  background:#f8f9fa;
+}
+.contact-form-wrapper{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:60px;
+  align-items:start;
+  max-width:1200px;
+  margin:0 auto;
+}
+.contact-info-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:24px;
+}
+.info-card{
+  background:#fff;
+  border-radius:16px;
+  padding:24px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.06);
+  border:1px solid rgba(0,0,0,0.05);
+  transition:all 0.3s ease;
+  text-align:center;
+}
+.info-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 24px rgba(0,0,0,0.1);
+}
+.info-card-icon{
+  font-size:28px;
+  margin-bottom:12px;
+  display:block;
+}
+.info-card h3{
+  font-family:'Fredoka',sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:var(--ink);
+  margin:0 0 8px;
+}
+.info-card p{
+  color:var(--muted);
+  margin:4px 0;
+  font-size:14px;
+}
+
+/* FAQ Section */
+.contact-faq{
+  padding:60px 0;
+  background:#fff;
+}
+.faq-title{
+  font-family:'Fredoka',sans-serif;
+  font-size:36px;
+  font-weight:700;
+  color:var(--ink);
+  text-align:center;
+  margin:0 0 48px;
+}
+.faq-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:32px;
+  max-width:1000px;
+  margin:0 auto;
+}
+.faq-item{
+  background:#f8f9fa;
+  border-radius:16px;
+  padding:32px;
+  border:1px solid rgba(0,0,0,0.05);
+  transition:all 0.3s ease;
+}
+.faq-item:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+  background:#fff;
+}
+.faq-item h3{
+  font-family:'Fredoka',sans-serif;
+  font-size:18px;
+  font-weight:600;
+  color:var(--ink);
+  margin:0 0 12px;
+}
+.faq-item p{
+  color:var(--muted);
+  margin:0;
+  line-height:1.6;
+}
+
+/* Responsive Contact */
+@media (max-width: 1024px){
+  .contact-methods-grid{ 
+    grid-template-columns:1fr; 
+    gap:24px; 
+  }
+  .contact-form-wrapper{ 
+    grid-template-columns:1fr; 
+    gap:40px; 
+  }
+  .contact-info-cards{ 
+    grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); 
+    gap:20px; 
+  }
+}
+
+@media (max-width: 640px){
+  .contact-methods-section{ 
+    padding:60px 0 40px; 
+  }
+  .contact-method-card{ 
+    padding:24px; 
+    flex-direction:column; 
+    text-align:center; 
+    gap:16px; 
+  }
+  .contact-form-section{ 
+    padding:40px 0; 
+  }
+  .contact-form{ 
+    padding:30px 24px; 
+  }
+  .form-row{ 
+    grid-template-columns:1fr; 
+    gap:16px; 
+  }
+  .contact-faq{ 
+    padding:40px 0; 
+  }
+  .faq-grid{ 
+    grid-template-columns:1fr; 
+    gap:24px; 
+  }
+  .faq-item{ 
+    padding:24px; 
+  }
+}
+
+/* Laminados Premium Section */
+.laminados-section{
+  padding:80px 0;
+  background:linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position:relative;
+  overflow:hidden;
+}
+.laminados-section::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(69,57,116,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+  pointer-events:none;
+}
+.laminados-header{
+  text-align:center;
+  margin-bottom:60px;
+  position:relative;
+  z-index:1;
+}
+.laminados-title{
+  font-family:'Fredoka',sans-serif;
+  font-size:clamp(36px, 5vw, 48px);
+  font-weight:700;
+  color:var(--ink);
+  margin:0 0 16px;
+  background:linear-gradient(135deg, var(--brand-2), var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.laminados-subtitle{
+  font-size:18px;
+  color:var(--muted);
+  margin:0;
+  max-width:600px;
+  margin:0 auto;
+}
+.laminados-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  gap:40px;
+  margin-bottom:60px;
+  position:relative;
+  z-index:1;
+}
+.laminado-card{
+  background:#fff;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 8px 32px rgba(0,0,0,0.08);
+  border:1px solid rgba(0,0,0,0.05);
+  transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position:relative;
+}
+.laminado-card:hover{
+  transform:translateY(-12px) scale(1.02);
+  box-shadow:0 20px 40px rgba(69,57,116,0.15);
+}
+.laminado-visual{
+  position:relative;
+  height:280px;
+  overflow:hidden;
+  background:linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+.laminado-image-container{
+  position:relative;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+.laminado-image-container img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 0.6s ease;
+}
+.laminado-card:hover .laminado-image-container img{
+  transform:scale(1.1);
+}
+.laminado-overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.1) 100%);
+  opacity:0;
+  transition:opacity 0.3s ease;
+}
+.laminado-card:hover .laminado-overlay{
+  opacity:1;
+}
+.laminado-overlay.holographic{
+  background:linear-gradient(45deg, 
+    rgba(255,0,150,0.1) 0%, 
+    rgba(0,255,255,0.1) 25%, 
+    rgba(255,255,0,0.1) 50%, 
+    rgba(255,0,255,0.1) 75%, 
+    rgba(0,255,150,0.1) 100%);
+  animation:holographic 3s ease-in-out infinite;
+}
+.laminado-overlay.confetti{
+  background:radial-gradient(circle at 30% 30%, 
+    rgba(255,215,0,0.2) 0%, 
+    rgba(255,105,180,0.1) 50%, 
+    transparent 100%);
+  animation:confetti 2s ease-in-out infinite;
+}
+@keyframes holographic{
+  0%, 100%{ opacity:0.3; transform:translateX(0); }
+  50%{ opacity:0.6; transform:translateX(10px); }
+}
+@keyframes confetti{
+  0%, 100%{ opacity:0.2; transform:scale(1); }
+  50%{ opacity:0.4; transform:scale(1.05); }
+}
+.laminado-badge{
+  position:absolute;
+  top:20px;
+  right:20px;
+  background:var(--brand-2);
+  color:#fff;
+  padding:8px 16px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  box-shadow:0 4px 12px rgba(69,57,116,0.3);
+  z-index:2;
+}
+.laminado-badge.special{
+  background:linear-gradient(135deg, #ff6b6b, #feca57);
+}
+.laminado-badge.exclusive{
+  background:linear-gradient(135deg, #667eea, #764ba2);
+}
+.laminado-content{
+  padding:32px;
+}
+.laminado-name{
+  font-family:'Fredoka',sans-serif;
+  font-size:24px;
+  font-weight:700;
+  color:var(--ink);
+  margin:0 0 12px;
+}
+.laminado-description{
+  color:var(--muted);
+  line-height:1.6;
+  margin:0 0 20px;
+  font-size:15px;
+}
+.laminado-features{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.feature-tag{
+  background:rgba(69,57,116,0.1);
+  color:var(--brand-2);
+  padding:6px 12px;
+  border-radius:12px;
+  font-size:12px;
+  font-weight:600;
+  border:1px solid rgba(69,57,116,0.2);
+}
+.laminados-cta{
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+.laminados-cta-text{
+  font-family:'Fredoka',sans-serif;
+  font-size:20px;
+  color:var(--ink);
+  margin:0 0 24px;
+}
+.laminados-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:16px 32px;
+  background:linear-gradient(135deg, var(--brand-2), var(--accent));
+  color:#fff;
+  text-decoration:none;
+  border-radius:16px;
+  font-weight:600;
+  font-size:16px;
+  transition:all 0.3s ease;
+  box-shadow:0 8px 24px rgba(69,57,116,0.3);
+}
+.laminados-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 32px rgba(69,57,116,0.4);
+  background:linear-gradient(135deg, var(--accent), var(--brand-2));
+}
+.btn-icon{
+  font-size:18px;
+}
+
+/* Responsive Laminados */
+@media (max-width: 1024px){
+  .laminados-section{ padding:60px 0; }
+  .laminados-grid{ 
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); 
+    gap:32px; 
+  }
+  .laminado-visual{ height:240px; }
+  .laminado-content{ padding:24px; }
+}
+
+@media (max-width: 640px){
+  .laminados-section{ padding:40px 0; }
+  .laminados-header{ margin-bottom:40px; }
+  .laminados-title{ font-size:32px; }
+  .laminados-subtitle{ font-size:16px; }
+  .laminados-grid{ 
+    grid-template-columns:1fr; 
+    gap:24px; 
+  }
+  .laminado-visual{ height:200px; }
+  .laminado-content{ padding:20px; }
+  .laminado-name{ font-size:20px; }
+  .laminado-description{ font-size:14px; }
+  .laminado-badge{ 
+    top:16px; 
+    right:16px; 
+    padding:6px 12px; 
+    font-size:11px; 
+  }
+  .laminados-cta-text{ font-size:18px; }
+  .laminados-btn{ 
+    padding:14px 24px; 
+    font-size:14px; 
+  }
+}
 
 @media (max-width:920px){
   .story-grid{grid-template-columns:1fr}
