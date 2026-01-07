@@ -22,126 +22,228 @@
   </header>
 
   <main>
-    <!-- Contact Methods Section -->
-    <section class="contact-methods-section">
+    <!-- Contact Hero Section -->
+    <section class="contact-hero-unique">
       <div class="container">
-        <div class="contact-methods-grid">
-          <a href="mailto:glitchimpresiones@gmail.com" class="contact-method-card">
-            <div class="contact-method-icon">📧</div>
-            <div class="contact-method-info">
-              <h3>Email</h3>
-              <p>glitchimpresiones@gmail.com</p>
+        <div class="contact-hero-wrapper">
+          <div class="contact-hero-left">
+            <div class="contact-badge">
+              <span class="badge-icon">📬</span>
+              <span class="badge-text">Conecta con nosotros</span>
             </div>
-          </a>
+            <h1 class="contact-hero-title">Tu Proyecto, Nuestra Pasión</h1>
+            <p class="contact-hero-description">
+              Desde una simple idea hasta el producto final en tus manos. 
+              Estamos aquí para hacer realidad cada uno de tus proyectos de impresión.
+            </p>
+            
+            <div class="contact-hero-cta">
+              <a href="#contact-form" class="cta-primary">Enviar Mensaje</a>
+              <a href="mailto:glitchimpresiones@gmail.com" class="cta-secondary">Email Directo</a>
+            </div>
+          </div>
           
-          <a href="https://wa.me/5491164132413" target="_blank" rel="noopener" class="contact-method-card">
-            <div class="contact-method-icon">💬</div>
-            <div class="contact-method-info">
-              <h3>WhatsApp</h3>
-              <p>Respuesta inmediata</p>
+          <div class="contact-hero-right">
+            <div class="hero-image-frame">
+              <div class="hero-image-container">
+                <img src="assets/img/hero-gallery.jpg" alt="Contacto GLITCH" />
+                <div class="hero-overlay"></div>
+              </div>
             </div>
-          </a>
+            
+            <div class="floating-elements">
+              <div class="float-element float-1">
+                <div class="contact-icon">📧</div>
+              </div>
+              <div class="float-element float-2">
+                <div class="contact-icon">�</div>
+              </div>
+              <div class="float-element float-3">
+                <div class="contact-icon">📱</div>
+              </div>
+              <div class="float-element float-4">
+                <div class="contact-icon">✨</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Form Section -->
-    <section class="contact-form-section">
+    <section id="contact-form" class="contact-form-section">
       <div class="container">
         <div class="contact-form-wrapper">
-          <div class="contact-form-header">
-            <h2 class="contact-form-title">Envíanos tu Mensaje</h2>
-            <p class="contact-form-subtitle">Contanos sobre tu proyecto y te responderemos a la brevedad</p>
-          </div>
-          
-          <form id="contact-form" class="contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Nombre *</label>
-                <input id="name" name="name" type="text" placeholder="Tu nombre completo" required>
+          <div class="contact-form-main">
+            <div class="contact-form-header">
+              <h2 class="contact-form-title">Envíanos tu Mensaje</h2>
+              <p class="contact-form-subtitle">Contanos sobre tu proyecto y te responderemos a la brevedad</p>
+            </div>
+            
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nombre *</label>
+                  <input id="name" name="name" type="text" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input id="email" name="email" type="email" placeholder="tu@email.com" required>
+                </div>
               </div>
+              
               <div class="form-group">
-                <label for="email">Email *</label>
-                <input id="email" name="email" type="email" placeholder="tu@email.com" required>
+                <label for="phone">Teléfono (opcional)</label>
+                <input id="phone" name="phone" type="tel" placeholder="+54 9 XXX XXX XXX">
               </div>
-            </div>
-            
-            <div class="form-group">
-              <label for="phone">Teléfono (opcional)</label>
-              <input id="phone" name="phone" type="tel" placeholder="+54 9 XXX XXX XXX">
-            </div>
-            
-            <div class="form-group">
-              <label for="subject">Asunto *</label>
-              <select id="subject" name="subject" required>
-                <option value="">Seleccioná un motivo</option>
-                <option value="consulta">Consulta general</option>
-                <option value="presupuesto">Solicitar presupuesto</option>
-                <option value="diseno">Ayuda con diseño</option>
-                <option value="urgente">Proyecto urgente</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Mensaje *</label>
-              <textarea id="message" name="message" rows="5" placeholder="Contanos los detalles de tu proyecto..." required></textarea>
-            </div>
-            
-            <div class="form-actions">
-              <button type="submit" class="btn primary contact-form-btn">
-                <span>Enviar Mensaje</span>
-                <span class="btn-icon">📤</span>
-              </button>
-            </div>
-          </form>
-        </div>
-        
-        <!-- Info Cards -->
-        <div class="contact-info-cards">
-          <div class="info-card">
-            <div class="info-card-icon">⏰</div>
-            <h3>Horario de Atención</h3>
-            <p>Lunes a Viernes: 9:00 - 18:00</p>
-            <p>Sábados: 9:00 - 13:00</p>
+              
+              <div class="form-group">
+                <label for="subject">Asunto *</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Seleccioná un motivo</option>
+                  <option value="consulta">Consulta general</option>
+                  <option value="presupuesto">Solicitar presupuesto</option>
+                  <option value="diseno">Ayuda con diseño</option>
+                  <option value="urgente">Proyecto urgente</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Mensaje *</label>
+                <textarea id="message" name="message" rows="5" placeholder="Contanos los detalles de tu proyecto..." required></textarea>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="btn primary contact-form-btn">
+                  <span>Enviar Mensaje</span>
+                  <span class="btn-icon">📤</span>
+                </button>
+              </div>
+            </form>
           </div>
           
-          <div class="info-card">
-            <div class="info-card-icon">🚀</div>
-            <h3>Tiempo de Respuesta</h3>
-            <p>Email: 2-4 horas</p>
-            <p>WhatsApp: Inmediato</p>
-          </div>
-          
-          <div class="info-card">
-            <div class="info-card-icon">📍</div>
-            <h3>Envíos</h3>
-            <p>Enviamos a todo el país</p>
-            <p>Retiro por taller disponible</p>
+          <!-- Info Sidebar -->
+          <div class="contact-info-sidebar">
+            <div class="info-card">
+              <div class="info-card-icon">⏰</div>
+              <h3>Horario de Atención</h3>
+              <p>Lunes a Viernes: 9:00 - 18:00</p>
+              <p>Sábados: 9:00 - 13:00</p>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-card-icon">🚀</div>
+              <h3>Tiempo de Respuesta</h3>
+              <p>Email: 2-4 horas</p>
+              <p>WhatsApp: Inmediato</p>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-card-icon">📍</div>
+              <h3>Envíos</h3>
+              <p>Enviamos a todo el país</p>
+              <p>Retiro por taller disponible</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="contact-faq">
+    <!-- FAQ & Info Section -->
+    <section class="contact-info-section">
       <div class="container">
-        <h2 class="faq-title">Preguntas Frecuentes</h2>
-        <div class="faq-grid">
-          <div class="faq-item">
-            <h3>¿Qué formatos de archivo aceptan?</h3>
-            <p>Aceptamos PNG, JPG, PDF, AI, PSD. Para mejor calidad, recomendamos PNG o PDF.</p>
+        <div class="contact-info-wrapper">
+          <div class="info-main">
+            <div class="info-header">
+              <h2 class="info-title">Todo lo que necesitas saber 🤔</h2>
+              <p class="info-subtitle">Respuestas rápidas a las preguntas más frecuentes</p>
+            </div>
+            
+            <div class="faq-grid">
+              <div class="faq-item">
+                <div class="faq-icon">📄</div>
+                <div class="faq-content">
+                  <h3>¿Qué formatos de archivo aceptan?</h3>
+                  <p>Aceptamos PNG, JPG, PDF, AI, PSD. Para mejor calidad, recomendamos PNG o PDF.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <div class="faq-icon">⏱️</div>
+                <div class="faq-content">
+                  <h3>¿Cuánto demora el pedido?</h3>
+                  <p>Dependiendo del volumen, entre 24-72 horas. Te confirmamos el tiempo exacto al consultar.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <div class="faq-icon">🚚</div>
+                <div class="faq-content">
+                  <h3>¿Hacen envíos a domicilio?</h3>
+                  <p>Sí, enviamos a todo Argentina por correo o moto. También podés retirar por nuestro taller.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <div class="faq-icon">💳</div>
+                <div class="faq-content">
+                  <h3>¿Necesito pagar antes?</h3>
+                  <p>Trabajamos con 50% de señal y el resto al recibir. También aceptamos mercado pago.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="faq-item">
-            <h3>¿Cuánto demora el pedido?</h3>
-            <p>Dependiendo del volumen, entre 24-72 horas. Te confirmamos el tiempo exacto al consultar.</p>
-          </div>
-          <div class="faq-item">
-            <h3>¿Hacen envíos a domicilio?</h3>
-            <p>Sí, enviamos a todo Argentina por correo o moto. También podés retirar por nuestro taller.</p>
-          </div>
-          <div class="faq-item">
-            <h3>¿Necesito pagar antes?</h3>
-            <p>Trabajamos con 50% de señal y el resto al recibir. También aceptamos mercado pago.</p>
+          
+          <!-- Quick Contact -->
+          <div class="quick-contact">
+            <div class="quick-contact-header">
+              <h3>Contacto Rápido</h3>
+              <p>¿Necesitas ayuda inmediata?</p>
+            </div>
+            
+            <div class="quick-contact-methods">
+              <a href="https://wa.me/5491164132413" target="_blank" rel="noopener" class="quick-contact-btn whatsapp">
+                <span class="quick-contact-icon">💬</span>
+                <div class="quick-contact-text">
+                  <strong>WhatsApp</strong>
+                  <span>Respuesta inmediata</span>
+                </div>
+              </a>
+              
+              <a href="mailto:glitchimpresiones@gmail.com" class="quick-contact-btn email">
+                <span class="quick-contact-icon">📧</span>
+                <div class="quick-contact-text">
+                  <strong>Email</strong>
+                  <span>glitchimpresiones@gmail.com</span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="quick-contact-info">
+              <div class="info-item">
+                <span class="info-icon">⏰</span>
+                <div class="info-details">
+                  <strong>Horario</strong>
+                  <span>Lun-Vie: 9:00-18:00 | Sáb: 9:00-13:00</span>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <span class="info-icon">🚀</span>
+                <div class="info-details">
+                  <strong>Respuesta</strong>
+                  <span>Email: 2-4hs | WhatsApp: Inmediato</span>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <span class="info-icon">📍</span>
+                <div class="info-details">
+                  <strong>Envíos</strong>
+                  <span>A todo el país | Retiro disponible</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
