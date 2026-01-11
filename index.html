@@ -340,8 +340,15 @@
       if (!slider || !wrapper || slides.length === 0) return;
       
       let currentIndex = 1; // Empezar en el segundo slide para efecto centrado
-      const slideWidth = 370; // 350px + 20px margin
       const totalSlides = slides.length;
+      
+      // Función para obtener el ancho del slide según el tamaño de pantalla
+      function getSlideWidth() {
+        if (window.innerWidth <= 768) {
+          return 250; // 240px + 10px margin en móvil
+        }
+        return 370; // 350px + 20px margin en desktop
+      }
       
       // Crear paginación
       slides.forEach((_, index) => {
@@ -353,6 +360,7 @@
       });
       
       function updateSlider() {
+        const slideWidth = getSlideWidth();
         const offset = -currentIndex * slideWidth + (slider.offsetWidth - slideWidth) / 2;
         wrapper.style.transform = `translateX(${offset}px)`;
         
